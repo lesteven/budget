@@ -1,2 +1,23 @@
 .home {
+    display: flex;
+}
+.home > * {
+    border: 1px solid black;
+    padding: 1% 1% 5% 1%;
+}
+.history {
+    flex: 1;
+}
+.history > p {
+    text-align: center;
+}
+.plan {
+    flex: 4;
+}
+.plan > p {
+    text-align: center;
+}
+.createBudget * {
+    height: 30px;
+    margin-right: 2%;
 }

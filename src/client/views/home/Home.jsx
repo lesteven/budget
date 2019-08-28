@@ -1,14 +1,15 @@
 import React from 'react';
 import css from './home.css';
+import History from './comp/History';
+import Plan from './comp/Plan';
 
 
 const Home = () => {
   return (
-    <div className='home'>
-      <div>
-        <p> Hello Home! </p>
-      </div>
-    </div>
+    <section className='home'>
+      <History/>
+      <Plan/>
+    </section>
   )
 }
 
