@@ -18,6 +18,16 @@ Users will be able to:
 * Node.js
 * Express.js
 
+#### Start Instructions
+* make sure you have node, npm and nodemon installed
+* npm i
+	* install all packages 
+* npm run server
+	* to start server
+* npm run client
+	* to start client
+* visit localhost:8080 to view app 
+
 #### Folder Structure
 src is where all the source code is located. It is separated by client code and server code.
 
