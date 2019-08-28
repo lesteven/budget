@@ -10,9 +10,15 @@ const Add = () => {
   const [year, yearChange ] = useForm(years[0]);
   const submit = (e) => {
     e.preventDefault();
-    console.log(month);
-    console.log(year);
-    console.log(budgetVal);
+    const arr = JSON.parse(localStorage.getItem('history')) || [];
+    console.log(arr);
+    const data = {
+      month,
+      year,
+      budget: budgetVal
+    }
+    arr.push(data);
+    localStorage.setItem('history', JSON.stringify(arr));
   }
   return (
     <section className = 'add' onSubmit = { submit }>
