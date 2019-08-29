@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import routes from '../routes';
 import css from './css/nav.css';
 
@@ -8,7 +8,13 @@ const NavBar = () => {
   return (
     <nav className = 'nav-bar'>
       {filteredRoutes.map(e => 
-        <Link to = {e.path} key = {e.path}> {e.title} </Link>
+        <NavLink to = {e.path} 
+          exact = {e.exact}
+          activeStyle={{
+            backgroundColor: 'navy',
+            color: 'white'
+          }}
+          key = {e.path}> {e.title} </NavLink>
       )}
     </nav>
   )

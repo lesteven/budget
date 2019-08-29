@@ -1,0 +1,16 @@
+.history {
+    flex: 1;
+}
+.history > p {
+    text-align: center;
+}
+.history * {
+    display: block;
+}
+.history a {
+    text-decoration: none;
+    padding: 5%;
+    border-bottom: 1px solid black;
+    color: black;
+}
+

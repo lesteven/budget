@@ -1,33 +1,8 @@
 .home {
     display: flex;
-    padding-bottom: 15%;
+    padding: 5% 0% 15%;
 }
 .home > * {
     border: 1px solid black;
     padding: 0% 0% 5% 0%;
-}
-.history {
-    flex: 1;
-}
-.history > p {
-    text-align: center;
-}
-.plan {
-    flex: 4;
-}
-.plan > p {
-    text-align: center;
-}
-.formStyle * {
-    height: 30px;
-    margin-right: 2%;
-}
-.history * {
-    display: block;
-}
-.history a {
-    text-decoration: none;
-    padding: 5%;
-    border-bottom: 1px solid black;
-    color: black;
 }

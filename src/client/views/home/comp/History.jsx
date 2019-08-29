@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import css from '../css/history.css'
 
 const History = (props) => {
   const data = useSelector(state => state.data);
@@ -9,9 +10,10 @@ const History = (props) => {
       <p> History </p>
       { Object.keys(data).map((e,index) => {
         const name = `${data[e].month} ${data[e].year}`;
-        return <Link 
+        return <NavLink 
+          activeStyle={{backgroundColor: "blue"}}
           to = {`date?month=${data[e].month}&year=${data[e].year}`} 
-          key = {`${data[e].month}_${data[e].year}`}> {name}</Link>
+          key = {`${data[e].month}_${data[e].year}`}> {name}</NavLink>
         }
       )}
     </div>
