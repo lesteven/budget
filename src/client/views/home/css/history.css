@@ -7,10 +7,12 @@
 .history * {
     display: block;
 }
-.history a {
+.histLink {
     text-decoration: none;
     padding: 5%;
     border-bottom: 1px solid black;
     color: black;
 }
-
+.active {
+    background-color: red;
+}
