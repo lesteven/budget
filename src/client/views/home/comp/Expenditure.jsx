@@ -9,11 +9,10 @@ const Expenditure = ({ currMonth, data }) => {
     <div>
       <h3> Expenditure: </h3>
       <AddExpen currMonth = { currMonth } data = { data }/>
-      { currMonth.expenditure? 
-          Object.keys(currMonth.expenditure).map((key,index) => (
+      { Object.keys(currMonth.expenditure).map((key,index) => (
           <p key = { key }> 
             { `${key} : ${currMonth.expenditure[key]}` } </p>
-        )): null
+        ))
       }
       <Donut currMonth = { currMonth }/>
     </div>

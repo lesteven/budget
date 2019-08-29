@@ -10,9 +10,9 @@ const Month = (props) => {
   let currMonth = {};
   if (Object.keys(data).length > 0 && query) {
     const name = `${query.month}_${query.year}`;
-    currMonth = data[name];
+    currMonth = data[name] || {};
   }
-  if (currMonth && Object.keys(currMonth).length > 0) {
+  if (Object.keys(currMonth).length > 0) {
     return (
       <div className = 'month'>
         <h3> Time: </h3>
