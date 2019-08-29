@@ -16,6 +16,13 @@ const routes = [
     exact: true,
     title: 'About',
   },
+  {
+    prefix: '',
+    path: '/date',
+    component: Home,
+    exact: true,
+    title: 'Home',
+  },
 ]
 
 export default routes;
