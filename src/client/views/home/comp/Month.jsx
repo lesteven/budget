@@ -13,8 +13,16 @@ const Month = (props) => {
     currMonth = data[name] || {};
   }
   if (Object.keys(currMonth).length > 0) {
+    const sum = Object.values(currMonth.expenditure).reduce((acc, curr) =>{
+      return acc + curr
+    })
+    const ratio = sum/currMonth.budget;
     return (
       <div className = 'month'>
+        <h3> Status: </h3>
+          { ratio <= 1? 
+              <p className = 'withinBudget'> Within Budget! </p> 
+              : <p className = 'overBudget'> Over Budget! </p>}
         <h3> Time: </h3>
         <p> Month: { currMonth.month }</p>
         <p> Year: { currMonth.year }</p>
