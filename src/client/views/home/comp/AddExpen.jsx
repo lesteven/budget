@@ -13,27 +13,28 @@ const AddExpen = () => {
   const data = useSelector(state => state.data);
   const query = qs.parse(location.search);
 
-  const [value, onChange] = useForm();
+  const [value, onChange, manualChange] = useForm();
   const [selValue, onSelect] = useForm(options[0]);
 
   const dispatch = useDispatch();
   const submit = (e) => {
     e.preventDefault();
     let currMonth = data[query.index];
-    const numTwo = Number.parseFloat(value);
+    const num = Number.parseFloat(value);
 
     if (!currMonth.expenditure) {
       currMonth.expenditure = {};
     }
-    if (currMonth.expenditure[selValue]) {
-      currMonth.expenditure[selValue] += numTwo;
-    } else {
-      currMonth.expenditure[selValue] = numTwo;
+    if (!currMonth.expenditure[selValue]) {
+      currMonth.expenditure[selValue] = 0;
     }
+    currMonth.expenditure[selValue] += num;
+
     const newData = [...data];
     newData[query.index] = currMonth;
     localStorage.setItem('history', JSON.stringify(newData));
     dispatch(update(newData));
+    manualChange('');
   }
   return (
     <form onSubmit = { submit } className = 'formStyle'>
