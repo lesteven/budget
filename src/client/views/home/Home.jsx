@@ -9,8 +9,8 @@ import { update } from '../../redux/data';
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    const arr = JSON.parse(localStorage.getItem('history')) || [];
-    dispatch(update(arr)); 
+    const obj = JSON.parse(localStorage.getItem('history')) || {};
+    dispatch(update(obj)); 
   }, [])
   return (
     <section className='home'>

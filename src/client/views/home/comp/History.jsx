@@ -7,11 +7,11 @@ const History = (props) => {
   return (
     <div className = 'history'>
       <p> History </p>
-      { data.map((e,index) => {
-        const name = `${e.month} ${e.year}`;
+      { Object.keys(data).map((e,index) => {
+        const name = `${data[e].month} ${data[e].year}`;
         return <Link 
-          to = {`date?month=${e.month}&year=${e.year}&index=${index}`} 
-          key = {`${name}_${index}`}> {name}</Link>
+          to = {`date?month=${data[e].month}&year=${data[e].year}`} 
+          key = {`${data[e].month}_${data[e].year}`}> {name}</Link>
         }
       )}
     </div>

@@ -3,18 +3,11 @@ import qs from 'query-string';
 import { useSelector } from 'react-redux';
 import AddExpen from './AddExpen';
 
-const Expenditure = () => {
-  const query = qs.parse(location.search);
-  const data = useSelector(state => state.data);
-  let currMonth = {};
-  if (data) {
-    currMonth = data[query.index];
-  }
-  console.log(currMonth);
+const Expenditure = ({ currMonth, data }) => {
   return (
     <div>
       <h3> Expenditure: </h3>
-      <AddExpen />
+      <AddExpen currMonth = { currMonth } data = { data }/>
       { currMonth.expenditure? 
           Object.keys(currMonth.expenditure).map((key,index) => (
           <p key = { key }> 

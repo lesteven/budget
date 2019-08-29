@@ -16,16 +16,24 @@ const Add = (props) => {
 
   const submit = (e) => {
     e.preventDefault();
-    const arr = JSON.parse(localStorage.getItem('history')) || [];
-    const data = {
-      month,
-      year,
-      budget: Number.parseFloat(budgetVal)
+    let obj = JSON.parse(localStorage.getItem('history')) || {};
+    const name = `${month}_${year}`;
+    if (obj[name]) {
+      props.history.push(`/date?month=${month}&year=${year}`);
+    } else {
+      const data = {
+        month,
+        year,
+        budget: Number.parseFloat(budgetVal)
+      }
+      obj = {
+        ...obj,
+        [name]: data
+      }
+      localStorage.setItem('history', JSON.stringify(obj));
+      dispatch(update(obj));
+      props.history.push(`/date?month=${month}&year=${year}`);
     }
-    arr.push(data);
-    localStorage.setItem('history', JSON.stringify(arr));
-    dispatch(update(arr));
-    props.history.push(`/date?month=${month}&year=${year}&index=${arr.length-1}`);
   }
   return (
     <section className = 'add' onSubmit = { submit }>

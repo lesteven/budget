@@ -9,17 +9,14 @@ import { update } from '../../../redux/data';
 const options = ['Food', 'Rent', 'Bills','Housing', 'Transportation',
   'Debt', 'Recreational']
 
-const AddExpen = () => {
-  const data = useSelector(state => state.data);
-  const query = qs.parse(location.search);
-
+const AddExpen = ({ currMonth, data }) => {
   const [value, onChange, manualChange] = useForm();
   const [selValue, onSelect] = useForm(options[0]);
+  const query = qs.parse(location.search);
 
   const dispatch = useDispatch();
   const submit = (e) => {
     e.preventDefault();
-    let currMonth = data[query.index];
     const num = Number.parseFloat(value);
 
     if (!currMonth.expenditure) {
@@ -30,8 +27,10 @@ const AddExpen = () => {
     }
     currMonth.expenditure[selValue] += num;
 
-    const newData = [...data];
-    newData[query.index] = currMonth;
+    const newData = {...data};
+   
+    const name = `${query.month}_${query.year}`;
+    newData[name] = currMonth;
     localStorage.setItem('history', JSON.stringify(newData));
     dispatch(update(newData));
     manualChange('');

@@ -15,7 +15,7 @@ export const clear = () => {
   }
 }
 
-const initialState = [];
+const initialState = {};
 
 export const data = (state = initialState, action) => {
   switch(action.type) {
