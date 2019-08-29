@@ -8,9 +8,7 @@ const Month = (props) => {
   const data = useSelector(state => state.data);
   let currMonth;
   if (data.length > 0 && query) {
-    console.log(data, query);  
     currMonth = data[query.index];
-    console.log(currMonth);
   }
   if (currMonth) {
     return (

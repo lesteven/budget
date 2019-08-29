@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import useForm from '../../../custHooks/useForm';
 import { useDispatch } from 'react-redux';
 import { update } from '../../../redux/data';
+import { withRouter } from 'react-router';
 
 const months = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"];
 const years = [2019,2020,2021,2022,2023,2024,2025];
 
-const Add = () => {
+const Add = (props) => {
   const [budgetVal, onChange ] = useForm();
   const [month, monthChange] = useForm(months[0]);
   const [year, yearChange ] = useForm(years[0]);
@@ -16,7 +17,6 @@ const Add = () => {
   const submit = (e) => {
     e.preventDefault();
     const arr = JSON.parse(localStorage.getItem('history')) || [];
-    console.log(arr);
     const data = {
       month,
       year,
@@ -25,6 +25,7 @@ const Add = () => {
     arr.push(data);
     localStorage.setItem('history', JSON.stringify(arr));
     dispatch(update(arr));
+    props.history.push(`/date?month=${month}&year=${year}&index=${arr.length-1}`);
   }
   return (
     <section className = 'add' onSubmit = { submit }>
@@ -44,4 +45,4 @@ const Add = () => {
   )
 }
 
-export default Add;
+export default withRouter(Add);
