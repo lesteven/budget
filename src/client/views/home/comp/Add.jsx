@@ -3,10 +3,7 @@ import useForm from '../../../custHooks/useForm';
 import { useDispatch } from 'react-redux';
 import { update } from '../../../redux/data';
 import { withRouter } from 'react-router';
-
-const months = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"];
-const years = [2019,2020,2021,2022,2023,2024,2025];
+import { months, years, expenditure } from './data';
 
 const Add = (props) => {
   const [budgetVal, onChange ] = useForm();
@@ -24,7 +21,8 @@ const Add = (props) => {
       const data = {
         month,
         year,
-        budget: Number.parseFloat(budgetVal)
+        budget: Number.parseFloat(budgetVal),
+        expenditure: {...expenditure}
       }
       obj = {
         ...obj,

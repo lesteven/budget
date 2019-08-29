@@ -12,7 +12,7 @@ const Month = (props) => {
     const name = `${query.month}_${query.year}`;
     currMonth = data[name];
   }
-  if (Object.keys(currMonth).length > 0) {
+  if (currMonth && Object.keys(currMonth).length > 0) {
     return (
       <div className = 'month'>
         <h3> Time: </h3>

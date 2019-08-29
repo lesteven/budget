@@ -4,10 +4,10 @@ import useForm from '../../../custHooks/useForm';
 import qs from 'query-string';
 import { useDispatch } from 'react-redux';
 import { update } from '../../../redux/data';
+import { expenditure } from './data';
 
 
-const options = ['Food', 'Rent', 'Bills','Housing', 'Transportation',
-  'Debt', 'Recreational']
+const options = Object.keys(expenditure);
 
 const AddExpen = ({ currMonth, data }) => {
   const [value, onChange, manualChange] = useForm();
@@ -19,12 +19,6 @@ const AddExpen = ({ currMonth, data }) => {
     e.preventDefault();
     const num = Number.parseFloat(value);
 
-    if (!currMonth.expenditure) {
-      currMonth.expenditure = {};
-    }
-    if (!currMonth.expenditure[selValue]) {
-      currMonth.expenditure[selValue] = 0;
-    }
     currMonth.expenditure[selValue] += num;
 
     const newData = {...data};

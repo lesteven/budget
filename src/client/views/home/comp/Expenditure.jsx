@@ -2,6 +2,7 @@ import React from 'react';
 import qs from 'query-string';
 import { useSelector } from 'react-redux';
 import AddExpen from './AddExpen';
+import Donut from './Donut';
 
 const Expenditure = ({ currMonth, data }) => {
   return (
@@ -14,6 +15,7 @@ const Expenditure = ({ currMonth, data }) => {
             { `${key} : ${currMonth.expenditure[key]}` } </p>
         )): null
       }
+      <Donut currMonth = { currMonth }/>
     </div>
   )
 }
