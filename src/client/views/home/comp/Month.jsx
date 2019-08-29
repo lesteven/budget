@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import qs from 'query-string';
 import css from '../css/month.css';
 import Expenditure from './Expenditure';
+import Delete from './Delete';
 
 const Month = (props) => {
   const query = qs.parse(location.search);
@@ -30,6 +31,7 @@ const Month = (props) => {
         <p> Year: { currMonth.year }</p>
         <p> Budget: { currMonth.budget } </p>
         <Expenditure currMonth = { currMonth } data = { data }/>
+        <Delete currMonth = { currMonth } data = { data }/>
       </div>
     )
   } else {

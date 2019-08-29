@@ -1,0 +1,10 @@
+.deleteHist {
+    margin-top: 30%;
+    background-color: darkred;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 2%;
+}
