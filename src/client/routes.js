@@ -1,5 +1,6 @@
 import Home from './views/home/Home';
 import About from './views/about/About';
+import Settings from './views/settings/Settings';
 
 const routes = [
   {
@@ -8,6 +9,13 @@ const routes = [
     component: Home,
     exact: true,
     title: 'Home',
+  },
+  {
+    prefix: '',
+    path: '/settings',
+    component: Settings,
+    exact: true,
+    title: 'Settings',
   },
   {
     prefix: '',

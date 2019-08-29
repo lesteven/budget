@@ -5,7 +5,6 @@ import Plan from './comp/Plan';
 import { useDispatch } from 'react-redux';
 import { update } from '../../redux/data';
 
-
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
