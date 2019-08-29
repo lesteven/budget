@@ -4,7 +4,6 @@ const backgroundColor = ['darkmagenta','darkred','darkorange',
   'indigo', 'teal', 'tomato', 'olivedrab'];
 
 const Donut = ({ currMonth }) => {
-  console.log(currMonth);
   const keys = currMonth? Object.values(currMonth.expenditure) : [];
   const name = currMonth? `${currMonth.month}_${currMonth.year}` : '';
   useEffect(() => {

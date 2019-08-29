@@ -11,7 +11,9 @@ const reducers = combineReducers({
 const configureStore = () => {
   return createStore(
     reducers,
-    compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__())
+    compose(applyMiddleware(thunk), 
+      window.__REDUX_DEVTOOLS_EXTENSION? 
+        window.__REDUX_DEVTOOLS_EXTENSION__(): f => f)
   )
 }
 
