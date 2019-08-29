@@ -1,3 +1,8 @@
 .about {
     text-align: center;
+    padding: 5%;
+}
+.ghLink {
+    text-decoration: none;
+    color: navy;
 }
