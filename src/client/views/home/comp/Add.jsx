@@ -20,7 +20,7 @@ const Add = (props) => {
     const data = {
       month,
       year,
-      budget: budgetVal
+      budget: Number.parseFloat(budgetVal)
     }
     arr.push(data);
     localStorage.setItem('history', JSON.stringify(arr));
@@ -36,7 +36,8 @@ const Add = (props) => {
         <select value = { year } onChange = { yearChange }>
           { years.map(e => <option value = {e} key = {e} >{e}</option>) }
         </select>
-        <input type = 'text' 
+        <input type = 'number' 
+          value = { budgetVal }
           onChange = { onChange }
           placeholder = 'Budget'/>
         <input type = 'submit' value='Add'/>
