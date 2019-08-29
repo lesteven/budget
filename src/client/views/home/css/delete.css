@@ -8,3 +8,33 @@
     cursor: pointer;
     padding: 2%;
 }
+
+.popUp {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.popUpInside {
+    box-sizing: border-box;
+    padding-top: 5%;
+    background-color: gray;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+.popButtons {
+    padding: 5%;
+}
+.popButtons * {
+    padding: 2%;
+    margin: 10%;
+}

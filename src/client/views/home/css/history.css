@@ -22,4 +22,6 @@
 .search {
     padding: 3% 0%;
     margin-bottom: 10%;
+    width: 100%;
+    box-sizing: border-box;
 }
