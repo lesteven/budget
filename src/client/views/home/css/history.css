@@ -10,9 +10,16 @@
 .histLink {
     text-decoration: none;
     padding: 5%;
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
     color: black;
+}
+.histLink:last-child {
+    border-bottom: 1px solid black;
 }
 .active {
     background-color: red;
+}
+.search {
+    padding: 3% 0%;
+    margin-bottom: 10%;
 }
