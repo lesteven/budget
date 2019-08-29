@@ -29,7 +29,7 @@ const Add = (props) => {
   }
   return (
     <section className = 'add' onSubmit = { submit }>
-      <form className = 'createBudget'>
+      <form className = 'formStyle'>
         <select value = { month } onChange = { monthChange }>
           { months.map(e => <option value = {e} key = {e} >{e}</option>) }
         </select>

@@ -1,14 +1,17 @@
 import React from 'react';
 import Add from './Add';
 import Month from './Month';
+import css from '../css/plan.css';
 
 const Plan = () => {
   return (
-    <div className = 'plan'>
+    <section className = 'plan'>
       <p> Plan </p>
-      <Add />
-      <Month />
-    </div>
+      <div className = 'planWrap'>
+        <Add />
+        <Month />
+      </div>
+    </section>
   )
 }
 
