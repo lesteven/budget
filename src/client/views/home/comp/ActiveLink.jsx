@@ -11,11 +11,11 @@ const ActiveLink = ({data, e, name}) => {
   const query = qs.parse(location.search);
   const active = query.month == data[e].month && query.year == data[e].year;
   const activeStyle = {
-    backgroundColor: '#020202',
+    backgroundColor: '#f5f6f9',
     fontWeight: 'bold',
     fontSize: '20px',
     padding: '10% auto',
-    color: 'white'
+    color: '#5a5c69'
   }
   return (
     <NavLink 

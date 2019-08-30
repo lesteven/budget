@@ -6,12 +6,7 @@
 .nav-bar * {
     font-size: 18px;
     text-decoration: none;
-    padding: 2%;
+    padding: 30px;
     color: black;
 }
 
-@media and (max-width: 500px) {
-    .nav-bar * {
-        padding: 1%;
-    }
-}
