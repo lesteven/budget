@@ -2,6 +2,7 @@
 .nav-bar {
     display: flex;
     justify-content: flex-end;
+    height: 80px;
 }
 .nav-bar * {
     font-size: 18px;
@@ -9,4 +10,10 @@
     padding: 30px;
     color: black;
 }
-
+.logo {
+    padding: 0% 0% 0% 3%;
+    width: 100px;
+}
+.mid {
+    flex-grow: 1;
+}
