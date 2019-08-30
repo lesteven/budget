@@ -17,3 +17,9 @@
 .mid {
     flex-grow: 1;
 }
+
+@media (max-width: 550px) {
+    .logo {
+        display: none;
+    }
+}

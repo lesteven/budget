@@ -6,6 +6,11 @@
     font-size: 20px;
 }
 .formStyle * {
-    height: 40px;
     margin-right: 2%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.formStyle input {
+    height: 100%;
 }
