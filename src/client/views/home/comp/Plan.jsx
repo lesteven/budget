@@ -1,5 +1,5 @@
 import React from 'react';
-import Add from './Add';
+import AddMonth from './AddMonth';
 import Month from './Month';
 import css from '../css/plan.css';
 
@@ -8,7 +8,7 @@ const Plan = () => {
     <section className = 'plan'>
       <p> Plan </p>
       <div className = 'planWrap'>
-        <Add />
+        <AddMonth />
         <Month />
       </div>
     </section>

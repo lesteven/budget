@@ -5,7 +5,7 @@ import { update } from '../../../redux/data';
 import { withRouter } from 'react-router';
 import { months, years, expenditure } from './data';
 
-const Add = (props) => {
+const AddMonth = (props) => {
   const [budgetVal, onChange ] = useForm();
   const [month, monthChange] = useForm(months[0]);
   const [year, yearChange ] = useForm(years[0]);
@@ -52,4 +52,4 @@ const Add = (props) => {
   )
 }
 
-export default withRouter(Add);
+export default withRouter(AddMonth);
