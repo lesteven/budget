@@ -31,8 +31,9 @@ const Donut = ({ currMonth }) => {
     })
     return () => chart.destroy();
   }, [values, currMonth])
+  const style = { maxWidth:'650px' }
   return (
-    <canvas id ={ name } ></canvas>
+    <canvas id ={ name } style = {style} ></canvas>
   )
 }
 

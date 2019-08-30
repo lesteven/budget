@@ -1,11 +1,9 @@
 .planWrap {
     padding: 3% 5%;
 }
-.plan {
-    flex: 3;
-}
 .plan > p {
     text-align: center;
+    font-size: 20px;
 }
 .formStyle * {
     height: 40px;

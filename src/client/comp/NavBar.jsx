@@ -11,7 +11,7 @@ const NavBar = () => {
         <NavLink to = {e.path} 
           exact = {e.exact}
           activeStyle={{
-            backgroundColor: 'navy',
+            backgroundColor: '#4D72DE',
             color: 'white'
           }}
           key = {e.path}> {e.title} </NavLink>

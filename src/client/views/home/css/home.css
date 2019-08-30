@@ -1,15 +1,39 @@
 .home {
     display: flex;
-    padding: 5% 0% 15%;
+    box-sizing: border-box;
 }
 .home > * {
-    border: 1px solid black;
     padding: 0% 0% 5% 0%;
+}
+.history, .plan {
+    box-sizing: border-box;
+}
+.history {
+    flex: 1;
+    background-color: #4D72DE;
+}
+
+.plan {
+    flex: 3;
+    background-color: #f5f6f9;
+    color: #5a5c69;
 }
 
 
 @media (max-width: 500px) {
     .home {
         flex-direction: column;
+    }
+}
+
+@media (min-width: 1000px) {
+    .plan {
+        flex: 4;
+    }
+}
+
+@media (min-width: 1200px) {
+    .plan {
+        flex: 5;
     }
 }
