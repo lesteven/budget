@@ -7,7 +7,10 @@ import { update } from '../../../redux/data';
 import { expenditure } from './data';
 
 
+// keys for expenditure selection types
 const options = Object.keys(expenditure);
+
+// Adds expenditure to localstorage and redux store
 
 const AddExpen = ({ currMonth, data }) => {
   const [value, onChange, manualChange] = useForm();
@@ -17,10 +20,13 @@ const AddExpen = ({ currMonth, data }) => {
   const dispatch = useDispatch();
   const submit = (e) => {
     e.preventDefault();
-    const num = Number.parseFloat(value);
 
+    // value is string, so must be converted before adding
+    const num = Number.parseFloat(value);
     currMonth.expenditure[selValue] += num;
 
+    // copy old object to new object and update relevant data
+    // then add to localstorage and redux
     const newData = {...data};
    
     const name = `${query.month}_${query.year}`;

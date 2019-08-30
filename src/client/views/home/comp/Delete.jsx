@@ -3,6 +3,9 @@ import css from '../css/delete.css';
 import { update } from '../../../redux/data';
 import { useDispatch } from 'react-redux';
 
+// Deletes selected month
+// PopUp prompts up to confirm deletion
+
 const PopUp = ({ deleteData, cancel }) => {
   const [yes, clickYes] = useState(false);
   const [no, clickNo] = useState(false);

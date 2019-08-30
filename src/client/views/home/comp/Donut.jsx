@@ -1,5 +1,8 @@
 import React, { useEffect }from 'react';
 
+
+// Graph data for donut chart using Chart.js
+
 const backgroundColor = ['darkmagenta','darkred','darkorange',
   'indigo', 'teal', 'tomato', 'olivedrab'];
 

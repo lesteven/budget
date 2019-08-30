@@ -1,4 +1,6 @@
 
+//data selection options for adding expenditure
+
 export const months = [
   "January", 
   "February", 

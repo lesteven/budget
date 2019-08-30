@@ -5,6 +5,9 @@ import { update } from '../../../redux/data';
 import { withRouter } from 'react-router';
 import { months, years, expenditure } from './data';
 
+// adds new month to localstorage and redux
+// if same month and year is received, app will push that to query
+
 const AddMonth = (props) => {
   const [budgetVal, onChange ] = useForm();
   const [month, monthChange] = useForm(months[0]);

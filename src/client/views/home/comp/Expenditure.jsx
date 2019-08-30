@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import AddExpen from './AddExpen';
 import Donut from './Donut';
 
+// has add expenditure function and graph of expenditures
+
 const Expenditure = ({ currMonth, data }) => {
   return (
     <div>

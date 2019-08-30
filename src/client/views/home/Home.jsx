@@ -7,6 +7,9 @@ import { update } from '../../redux/data';
 
 const Home = () => {
   const dispatch = useDispatch();
+
+  // grabs data from local storage to fill up page
+  // if no data, empty object is given instead
   useEffect(() => {
     const obj = JSON.parse(localStorage.getItem('history')) || {};
     dispatch(update(obj)); 

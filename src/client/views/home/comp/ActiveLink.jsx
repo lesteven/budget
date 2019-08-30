@@ -3,6 +3,10 @@ import { NavLink } from 'react-router-dom';
 import qs from 'query-string';
 import Delete from './Delete';
 
+
+// ActiveLink styles links based on query parameters
+// Whichever link is clicked, will be styled
+
 const ActiveLink = ({data, e, name}) => {
   const query = qs.parse(location.search);
   const active = query.month == data[e].month && query.year == data[e].year;

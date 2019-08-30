@@ -5,6 +5,8 @@ import css from '../css/month.css';
 import Expenditure from './Expenditure';
 import Delete from './Delete';
 
+// displays the current clicked month
+
 const Month = (props) => {
   const query = qs.parse(location.search);
   const data = useSelector(state => state.data);

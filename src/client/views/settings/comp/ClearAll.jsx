@@ -3,6 +3,8 @@ import css from '../css/clearAll.css';
 import { clear } from '../../../redux/data';
 import { withRouter } from 'react-router';
 
+// emptys local storage and updates redux
+
 const ClearAll = (props) => {
   const onClick = () => {
     localStorage.removeItem('history');

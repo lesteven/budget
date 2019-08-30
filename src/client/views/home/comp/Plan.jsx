@@ -3,6 +3,8 @@ import AddMonth from './AddMonth';
 import Month from './Month';
 import css from '../css/plan.css';
 
+// the wrapper for the monthly plan
+
 const Plan = () => {
   return (
     <section className = 'plan'>

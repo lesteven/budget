@@ -5,6 +5,9 @@ import css from '../css/history.css'
 import ActiveLink from './ActiveLink';
 import useForm from '../../../custHooks/useForm';
 
+// displays all monthly budgets 
+// includes basic search functionality
+
 const History = (props) => {
   const data = useSelector(state => state.data);
   const [search, onChange] = useForm(); 
